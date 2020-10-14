@@ -5,4 +5,3 @@ hero.style.backgroundImage =
   "url('https://raw.githubusercontent.com/dbullard2/pool-party/master/img/" +
   images[Math.floor(Math.random() * images.length)] +
   ".jpg')";
-console.log(test);
