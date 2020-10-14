@@ -8,8 +8,7 @@
 
 #hero {
   background-size: cover;
-  background-position: center;
-  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.3); }
+  background-position: center; }
 
 .one .title,
 .one .subtitle {
