@@ -122,6 +122,15 @@
   font-weight: bold;
   margin-top: 2vh; }
 
+.f-item {
+  color: #858593 !important; }
+
+.f-item:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.5vh; }
+
 .fbreak {
   width: 30vw;
   height: 5px; }
@@ -132,8 +141,7 @@
 
 .fbreak-mobile {
   width: 15vw;
-  height: 5px;
-  background-color: red; }
+  height: 5px; }
 
 .break {
   margin-bottom: 1vh; }
@@ -156,8 +164,54 @@
   justify-content: center;
   font-weight: bold; }
 
+.news-note:hover {
+  cursor: pointer; }
+
 ::placeholder {
   color: #858593; }
+
+.plug {
+  background-color: #272932;
+  color: #fff;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px dashed #fff; }
+
+.plug a:hover {
+  text-decoration: underline;
+  text-decoration-color: #93ff93;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.5rem; }
+
+aside {
+  background-color: #ffec61;
+  width: 20vw;
+  height: 35vh;
+  padding: 1vw; }
+
+.swim {
+  display: flex; }
+
+.swim-break {
+  margin-left: 2.5vw; }
+
+.shop {
+  display: flex;
+  margin-bottom: 3vh; }
+
+.shop-item {
+  width: 30%;
+  margin-right: 3%;
+  margin-bottom: 5vh;
+  text-align: center; }
+
+.shop-item img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1vh;
+  object-fit: cover; }
 
 /*! bulma.io v0.9.1 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */

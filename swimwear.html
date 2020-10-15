@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pool Party</title>
+    <link rel="stylesheet" href="css/mystyles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" />
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item logo is-size-1" href="index.html"> Pool Party </a>
+
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start"></div>
+
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="swimwear.html" class="navbar-link"> Swimwear </a>
+
+            <div class="navbar-dropdown">
+              <a href="swimwear.html#mens" class="navbar-item"> Mens </a>
+              <a href="swimwear.html#womens" class="navbar-item"> Womens </a>
+            </div>
+          </div>
+          <a href="swimwear.html#accessories" class="navbar-item"> Accessories </a>
+          <a class="navbar-item"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+      </div>
+    </nav>
+    <section class="section swim">
+      <aside class="menu is-hidden-mobile">
+        <p class="menu-label has-text-weight-bold">Swimwear</p>
+        <ul class="menu-list">
+          <li><a onclick="filterSelection('0')">Mens</a></li>
+          <li><a onclick="filterSelection('1')">Womens</a></li>
+          <li><a onclick="filterSelection('all')">Show All</a></li>
+        </ul>
+        <p class="menu-label has-text-weight-bold">Accessories</p>
+        <ul class="menu-list">
+          <li><a onclick="filterSelection('2')">Towels</a></li>
+          <li><a onclick="filterSelection('3')">Sunglasses</a></li>
+          <li><a onclick="filterSelection('4')">Sunscreen</a></li>
+          <li><a onclick="filterSelection('all')">Show All</a></li>
+        </ul>
+      </aside>
+      <div class="swim-break is-hidden-mobile"></div>
+      <div class="container">
+        <p class="is-size-1-tablet is-size-3-mobile has-text-centered is-capitalized category">
+          all
+        </p>
+        <br />
+        <div class="shop" id="mens">
+          <div class="shop-item 0 canHide">
+            <img
+              src="img/men1.jpg"
+              alt=""
+              class="image"
+              onmouseover="this.src='img/men1_2.jpg'"
+              onmouseout="this.src='img/men1.jpg'"
+            />
+            <p>Classic Royal Boardshorts</p>
+            <p>$16.00</p>
+          </div>
+          <div class="shop-item 0 canHide">
+            <img
+              src="img/men2.jpg"
+              alt=""
+              class="image"
+              onmouseover="this.src='img/men2_2.jpg'"
+              onmouseout="this.src='img/men2.jpg'"
+            />
+            <p>Black Swim Boxers</p>
+            <p>$31.25</p>
+          </div>
+          <div class="shop-item 0 canHide">
+            <img
+              src="img/men3.jpg"
+              alt=""
+              class="image"
+              onmouseover="this.src='img/men3_2.jpg'"
+              onmouseout="this.src='img/men3.jpg'"
+            />
+            <p>Marble Swim Shorts</p>
+            <p>$17.50</p>
+          </div>
+        </div>
+        <div class="shop" id="womens">
+          <div class="shop-item 1 canHide">
+            <img
+              src="img/women1.jpg"
+              alt=""
+              class="image"
+              onmouseover="this.src='img/women1_2.jpg'"
+              onmouseout="this.src='img/women1.jpg'"
+            />
+            <p>Happy Hour One Piece Swimsuit</p>
+            <p>$34.96</p>
+          </div>
+          <div class="shop-item 1 canHide">
+            <img
+              src="img/women2.jpg"
+              alt=""
+              class="image"
+              onmouseover="this.src='img/women2_2.jpg'"
+              onmouseout="this.src='img/women2.jpg'"
+            />
+            <p>Tie-Dyed Bikini</p>
+            <p>$26.95</p>
+          </div>
+          <div class="shop-item 1 canHide">
+            <img
+              src="img/women3.jpg"
+              alt=""
+              class="image"
+              onmouseover="this.src='img/women3_2.jpg'"
+              onmouseout="this.src='img/women3.jpg'"
+            />
+            <p>Yellow Square Neck Bikini</p>
+            <p>$26.95</p>
+          </div>
+        </div>
+        <div class="shop" id="accessories">
+          <div class="shop-item 2 canHide">
+            <img src="img/flamingo.jpg" alt="" class="image" />
+            <p>Flamingo Beach Towel</p>
+            <p>$10.00</p>
+          </div>
+          <div class="shop-item 3 canHide">
+            <img
+              src="img/sunglasses.jpg"
+              alt=""
+              class="image"
+              onmouseover="this.src='img/sunglasses_2.jpg'"
+              onmouseout="this.src='img/sunglasses.jpg'"
+            />
+            <p>Playboy Square Sunglasses</p>
+            <p>$7.50</p>
+          </div>
+          <div class="shop-item 4 canHide">
+            <img src="img/sunscreen.png" alt="" class="image" />
+            <p>Clean Essential Sunscreen</p>
+            <p>$9.50</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div>
+        <p class="logo is-size-1" style="color: #fff">Pool Party</p>
+        <p>128 Market St.<br />19013 Philadelphia<br />Pennsylvania suite #201</p>
+      </div>
+      <div class="fbreak is-hidden-mobile"></div>
+      <div class="fbreak-mobile is-hidden-tablet"></div>
+      <div>
+        <p class="fhead">Shopping</p>
+        <a href="swimwear.html#mens" class="f-item">Mens</a> <br />
+        <a href="swimwear.html#womens" class="f-item">Womens</a> <br />
+        <a href="accessories.html" class="f-item">Accessories</a>
+      </div>
+      <div class="fbreak-small is-hidden-mobile"></div>
+
+      <div class="is-hidden-mobile">
+        <p class="fhead">Join the family</p>
+        <div class="is-hidden-mobile break"></div>
+        <p>contact@poolparty.com</p>
+        <div class="is-hidden-mobile break"></div>
+        <div style="display: flex" class="is-hidden-mobile">
+          <input type="text" placeholder="Enter Your Email" class="input news" />
+          <p class="news-note">Get notified</p>
+        </div>
+      </div>
+    </footer>
+    <div class="plug">
+      <p class="is-size-5">Designed & Developed by&nbsp;</p>
+      <a href="https://www.creanost.com/" class="is-size-5"
+        ><span style="color: #87f2ff">crea </span><span style="color: #ff87db">nost</span></a
+      >
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
