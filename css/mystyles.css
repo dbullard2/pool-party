@@ -199,7 +199,7 @@ aside {
 
 .shop {
   display: flex;
-  margin-bottom: 3vh; }
+  margin-bottom: 10vh; }
 
 .shop-item {
   width: 30%;
@@ -212,6 +212,28 @@ aside {
   height: 100%;
   margin-bottom: 1vh;
   object-fit: cover; }
+
+.shop-item button {
+  margin-top: 0.5vh; }
+
+.mode {
+  background-color: #fff;
+  width: 50vh;
+  height: 50vh; }
+
+.img-box {
+  width: 90%;
+  height: 60%;
+  margin: 0 auto;
+  margin-top: 2vh; }
+
+.img-box img {
+  height: 100%;
+  display: block;
+  margin: 0 auto; }
+
+.rush {
+  padding-bottom: 2vh !important; }
 
 /*! bulma.io v0.9.1 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
