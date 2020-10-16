@@ -301,4 +301,39 @@ aside {
   padding-bottom: 2vh !important;
 }
 
+.cart-item {
+  margin-top: 5vh;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  color: #000;
+  justify-content: space-between;
+}
+
+.front {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.front p {
+  margin-left: 2vw;
+}
+
+.front img {
+  height: 100%;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+}
+
+.remove {
+  color: red;
+  margin-left: 2vw;
+  cursor: pointer;
+}
+
 @import '../node_modules/bulma/bulma.sass';

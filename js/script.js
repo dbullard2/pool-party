@@ -1,5 +1,39 @@
-var category = document.getElementsByClassName('category')[0];
 var cartItems = [];
+var totalF = 0;
+var total = document.getElementsByClassName('total')[0];
+
+if (sessionStorage.cart !== undefined) {
+  cartItems = JSON.parse(sessionStorage.getItem('cart'));
+}
+
+document.addEventListener('click', function (e) {
+  e = e || window.event;
+  var target = e.target;
+  if (target.classList.contains('remove')) {
+    let removeItem = e.target.parentNode.parentNode
+      .querySelector('.front')
+      .querySelector('.cart-img').src;
+    for (h = 0; h < cartItems.length; h++) {
+      if (cartItems[h].image == removeItem) {
+        cartItems[h].price = cartItems[h].price.replace(/\$/g, '');
+        cartItems[h].price = parseFloat(cartItems[h].price);
+        totalF -= parseFloat(cartItems[h].price);
+        totalF = totalF.toFixed(2);
+        if (isNaN(totalF)) {
+          total.innerHTML = '$' + 0;
+        } else {
+          total.innerHTML = '$' + totalF;
+        }
+
+        cartItems.splice(h, 1);
+        sessionStorage.setItem('cart', JSON.stringify(cartItems));
+      }
+    }
+    target.parentNode.parentNode.remove();
+  }
+});
+
+var category = document.getElementsByClassName('category')[0];
 var image = document.getElementsByClassName('img-box')[0];
 var modal = document.getElementsByClassName('modal')[0];
 var modalBackground = document.getElementsByClassName('modal-background')[0];
@@ -60,12 +94,23 @@ function closeModal() {
 }
 
 function loadCart() {
-  //document.getElementsByClassName('intro')[0].appendChild(cartItems[0]);
   var intro = document.getElementsByClassName('intro')[0];
   var arr = JSON.parse(sessionStorage.getItem('cart'));
   for (h = 0; h < arr.length; h++) {
     let cur = arr[h];
-    intro.insertAdjacentHTML('afterend', '<img src="' + cur.image + '" />');
-    console.log(cur.image);
+    intro.insertAdjacentHTML(
+      'afterend',
+      '<div class="cart-item"><div class="front"><img class="cart-img" src="' +
+        cur.image +
+        '" /><p class="is-size-3">' +
+        cur.title +
+        '</p></div> <div class="back"><p class="is-size-3">' +
+        cur.price +
+        '</p><p class="is-size-3 has-text-weight-bold remove">X</p></div></div>'
+    );
+    cur.price = cur.price.replace(/\$/g, '');
+    cur.price = parseFloat(cur.price);
+    totalF += cur.price;
+    total.innerHTML = '$' + totalF;
   }
 }
