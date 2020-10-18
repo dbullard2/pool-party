@@ -336,4 +336,55 @@ aside {
   cursor: pointer;
 }
 
+.stepper {
+  color: #000 !important;
+  font-weight: bold;
+  max-width: 500px !important;
+}
+
+.stepper::placeholder {
+  color: #000 !important;
+}
+
+.split {
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 2vw;
+}
+
+.buttons {
+  display: flex;
+}
+
+.tab {
+  display: none;
+}
+
+.carrd {
+  display: flex;
+  max-width: 500px;
+}
+
+.exp {
+  margin-right: 1vw;
+}
+
+#done {
+  width: 60vw;
+  height: 50vw;
+  background-color: #000;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#done i {
+  color: #fff;
+}
+
 @import '../node_modules/bulma/bulma.sass';

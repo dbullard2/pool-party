@@ -1,6 +1,10 @@
 var cartItems = [];
 var totalF = 0;
 var total = document.getElementsByClassName('total')[0];
+var category = document.getElementsByClassName('category')[0];
+var image = document.getElementsByClassName('img-box')[0];
+var modal = document.getElementsByClassName('modal')[0];
+var modalBackground = document.getElementsByClassName('modal-background')[0];
 
 if (sessionStorage.cart !== undefined) {
   cartItems = JSON.parse(sessionStorage.getItem('cart'));
@@ -33,10 +37,33 @@ document.addEventListener('click', function (e) {
   }
 });
 
-var category = document.getElementsByClassName('category')[0];
-var image = document.getElementsByClassName('img-box')[0];
-var modal = document.getElementsByClassName('modal')[0];
-var modalBackground = document.getElementsByClassName('modal-background')[0];
+var currentTab = 0;
+showTab(currentTab);
+
+function showTab(n) {
+  let x = document.getElementsByClassName('tab');
+  x[n].style.display = 'block';
+  if (n == 0) {
+    document.getElementById('prevBtn').style.display = 'none';
+  } else {
+    document.getElementById('prevBtn').style.display = 'inline';
+  }
+
+  if (n == x.length - 1) {
+    document.getElementById('nextBtn').classList.add('is-hidden');
+    document.getElementsByClassName('submit')[0].classList.remove('is-hidden');
+  } else {
+    document.getElementById('nextBtn').innerHTML = 'Next';
+  }
+}
+
+function nextPrev(n) {
+  var x = document.getElementsByClassName('tab');
+
+  x[currentTab].style.display = 'none';
+  currentTab += n;
+  showTab(currentTab);
+}
 
 if ((document.body.id = 'home')) {
   var hero = document.getElementById('hero');
