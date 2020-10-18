@@ -10,6 +10,15 @@ if (sessionStorage.cart !== undefined) {
   cartItems = JSON.parse(sessionStorage.getItem('cart'));
 }
 
+if ((document.body.id = 'home')) {
+  var hero = document.getElementById('hero');
+  var images = ['hero1', 'hero2', 'hero3', 'hero4', 'hero5'];
+  hero.style.backgroundImage =
+    "url('https://raw.githubusercontent.com/dbullard2/pool-party/master/img/" +
+    images[Math.floor(Math.random() * images.length)] +
+    ".jpg')";
+}
+
 document.addEventListener('click', function (e) {
   e = e || window.event;
   var target = e.target;
@@ -63,15 +72,6 @@ function nextPrev(n) {
   x[currentTab].style.display = 'none';
   currentTab += n;
   showTab(currentTab);
-}
-
-if ((document.body.id = 'home')) {
-  var hero = document.getElementById('hero');
-  var images = ['hero1', 'hero2', 'hero3', 'hero4', 'hero5'];
-  hero.style.backgroundImage =
-    "url('https://raw.githubusercontent.com/dbullard2/pool-party/master/img/" +
-    images[Math.floor(Math.random() * images.length)] +
-    ".jpg')";
 }
 
 //filter items by shopping category
